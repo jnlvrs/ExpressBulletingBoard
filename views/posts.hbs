@@ -1,0 +1,17 @@
+
+<div>
+    <button onclick='location.href="http://localhost:3000"'>Homepage</button>
+    <h2>Id:{{UserId}} User: {{UserName}}</h2>
+</div>
+<hr>
+<form id="post" name="post" method="POST" action="posts/submit/{{UserId}}">
+    <label for="postTitle">Post Title: </label>
+    <input type="text" id="postTitle" name="postTitle" required>
+    <br>
+    <br>
+    <textarea name="postBody" rows="15" cols="100" placeholder="Write your Post here!"></textarea>
+    <br>
+    <br>
+    <button type="submit">Post</button>
+</form>
+<hr>

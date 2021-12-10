@@ -1,0 +1,21 @@
+<h1>Hello {{ FirstName }} {{ LastName }} Id:{{ UserId }}</h1>
+<h2>Email: {{ Email }}</h2>
+<h3>Username: {{ UserName }}</h3>
+<div>
+    <button onclick='location.href="http://localhost:3000"'>Homepage</button>
+    <button onclick='location.href="http://localhost:3000/users/admin"'>Back</button>
+</div>
+<hr>
+<div>
+    <h4>Past Posts</h4>
+    <div>
+        {{#each postsByUser}}
+        <hr>
+        <label for="PostTitle">Id:{{PostId}} Title: {{PostTitle}}</label>
+        <p>{{PostBody}}</p>
+        <form id="delete-post" name="post" method="POST" action="/posts/delete/{{PostId}}">
+            <button type="submit">Delete</button>
+        </form>
+        {{/each}}
+    </div>
+</div>

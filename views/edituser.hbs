@@ -1,0 +1,18 @@
+<form id="edit-user" name="post" method="POST" action="/users/update/{{UserId}}">
+    <div>                                                   
+        <label for="firstname">First Name:  </label>
+        <input type="text" name="firstName" placeholder="{{FirstName}}" required>
+    </div>
+    <div>
+        <label for="lastname">Last Name: </label>
+        <input type="text" name="lastName" placeholder="{{LastName}}" required>
+    </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="{{Email}}" required>
+    </div>
+    <br>
+    <div>
+        <button type="Submit">Submit</button>
+    </div>
+</form>

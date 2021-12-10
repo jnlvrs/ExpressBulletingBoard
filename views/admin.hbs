@@ -1,0 +1,25 @@
+<h1>Hello: Admin</h1>
+<h3>List of users</h3>
+<hr>
+<div>
+    <ul>
+        {{#each usersInfo}}
+        <br>
+        <li>Id:{{UserId}}.- {{FirstName}} {{LastName}}</li>
+        <button onclick='location.href="http://localhost:3000/users/adminviewuser/{{UserId}}"'>Profile</button>
+        <form method="POST" action="/users/delete/{{UserId}}" onSubmit="window.location.reload()">
+            <button type="submit">Delete</button>
+        </form>
+        <br>
+        {{/each}}
+    </ul>
+    <br>
+    <br>
+    <div>
+        <form id="logout" name="logout" method="POST" action="/users/logout">
+            <button  type="submit">Logout</button>
+        </form>
+        <hr>
+        <button onclick='location.href="http://localhost:3000"'>Homepage</button>
+    </div>
+</div>

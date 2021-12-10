@@ -1,0 +1,17 @@
+<div>
+    <button onclick='location.href="http://localhost:3000/users/signup"'>Sign up</button>
+    <button onclick='location.href="http://localhost:3000/users/login"'>login</button>
+</div>
+<h1>Bulletinboard</h1>
+<p>Current Posts!</p>
+<div>
+    {{#each postsInfo}}
+    <br>
+    <label>Id:{{UserId}} Post Title: {{PostTitle}}</label>
+    <br>
+    <div>{{PostBody}}</div>
+    {{/each}}
+</div>
+
+
+
