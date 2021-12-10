@@ -211,7 +211,7 @@ router.post('/update/:id', function(req, res, next){
   })
 });
 
-// "Delete" technacally am updating and erasing data from user since if i use .destroy it would remove it completely and i need the deleted colum to be updated
+// "Delete" technically am updating and erasing data from user since if i use .destroy it would remove it completely and i need the deleted colum to be updated
 router.post('/delete/:id', function (req, res, next) {
   let userId = parseInt(req.params.id);
   models.posts.findOne({

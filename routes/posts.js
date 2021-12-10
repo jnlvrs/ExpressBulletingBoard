@@ -70,7 +70,7 @@ router.get('/edit/:id', function(req, res, next){
     }
 });
 
-//Post for Submiting a edit post
+//Post for Submitting a edit post
 router.post('/update/:id', function(req, res, next){
     let postId = parseInt(req.params.id);
     models.posts.update({
